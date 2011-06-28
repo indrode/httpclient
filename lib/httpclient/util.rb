@@ -6,7 +6,7 @@
 # either the dual license version in 2003, or any later version.
 
 
-require 'uri'
+require 'addressable/uri'
 
 
 unless ''.respond_to?(:bytesize)
@@ -81,7 +81,7 @@ class HTTPClient
         uri
       else
         #URI.parse(uri.to_s)
-        uri
+        Addressable::URI.parse(uri.to_s)
       end
     end
 
