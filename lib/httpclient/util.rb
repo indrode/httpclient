@@ -80,7 +80,8 @@ class HTTPClient
       elsif uri.is_a?(URI)
         uri
       else
-        URI.parse(uri.to_s)
+        #URI.parse(uri.to_s)
+        uri
       end
     end
 
